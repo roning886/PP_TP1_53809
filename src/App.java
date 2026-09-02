@@ -7,16 +7,21 @@ public class App {
         Estudiante alumno2 = new Estudiante("52000", "Marta");
         Estudiante alumno3 = new Estudiante("51000","Facundo");
 
+        ArrayList <Estudiante> estudiantes = new ArrayList<>();
+        estudiantes.add(alumno1);
+        estudiantes.add(alumno2);
+        estudiantes.add(alumno3);
+
         Sala sala1 = new Sala(1,"Laboratorio informatico");
 
         EventoUniversitario evento1 = new EventoUniversitario( "1", "Ciberseguridad", 1000.0, false);
 
-        System.out.println("DATOS DE LOS EVENTOS");
+        System.out.println("\nDATOS DE LOS EVENTOS");
 
         evento1.asignarSala(sala1);
 
         evento1.crearActividad(1,"Proteccion de sistemas",30,"charla","si",false);
-        evento1.crearActividad(2,"Como estar mas seguro en internet",20,"taller","no",true);
+        evento1.crearActividad(2,"Seguridad en internet",20,"taller","no",true);
 
         Actividad act1 =evento1.getActividad(1);
         Actividad act2 =evento1.getActividad(2);

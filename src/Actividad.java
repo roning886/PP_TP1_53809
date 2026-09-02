@@ -24,7 +24,7 @@ public abstract class Actividad {
         System.out.println("*    Inscripciones a actividad: " +this.titulo);
         for (Inscripcion i:this.inscripciones)
         {
-            System.out.println("        Nombre del estudiante: "+ i.getEstudiante().getNombre()+ " | legajo del estudiante: "+ i.getEstudiante().getLegajo());
+            System.out.println("        Nombre del estudiante: "+ i.getEstudiante().getNombre()+ " | legajo del estudiante: "+ i.getEstudiante().getLegajo()+" | fecha de inscripcion: "+i.getFecha());
         }
     }
     public final void mostrarIdentificacion(){
