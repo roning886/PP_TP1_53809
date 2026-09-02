@@ -33,16 +33,15 @@ public class EventoUniversitario {
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"+"\nSALA ASIGNADA");
         System.out.println("nombre de la sala: "+ this.sala.getNombre() + "\nID de la sala: "+ this.sala.getId());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println("Datos de actividad");
+        System.out.println("DATOS DE LAS ACTIVIDADES");
+        System.out.println( "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         for (Actividad i : this.actividades)
                 {
                     System.out.println("     ID: " + i.getId() + "\n     Titulo: "+ i.getTitulo()+ "\n     Cupo maximo: "+ i.getCupoMaximo());
                     i.mostrarInscripciones();
                     System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 }
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println( "COSTO ESTIMADO "+ calcularCostoEstimado() );
-        System.out.println("=================================================");
     }
 
     public Actividad getActividad(int id){

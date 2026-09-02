@@ -11,14 +11,9 @@ public class App {
 
         EventoUniversitario evento1 = new EventoUniversitario( "1", "Ciberseguridad", 1000.0, false);
 
-        System.out.println("datos de los eventos");
+        System.out.println("DATOS DE LOS EVENTOS");
 
         evento1.asignarSala(sala1);
-
-        ArrayList <Estudiante> estudiantes = new ArrayList<>();
-        estudiantes.add(alumno1);
-        estudiantes.add(alumno2);
-        estudiantes.add(alumno3);
 
         evento1.crearActividad(1,"Proteccion de sistemas",30,"charla","si",false);
         evento1.crearActividad(2,"Como estar mas seguro en internet",20,"taller","no",true);
