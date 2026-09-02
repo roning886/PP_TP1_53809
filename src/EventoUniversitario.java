@@ -29,17 +29,20 @@ public class EventoUniversitario {
     }
 
     public void mostrarDatos (){
-        System.out.println("\n=================================================" + "\nid " + this.id + "\ntitulo " + this.titulo + "\ncosto base " + this.costoBase + "\nes gratuito? " + (this.gratuito ? "si":"no"));
+        System.out.println("=================================================" + "\nid " + this.id + "\ntitulo " + this.titulo + "\ncosto base " + this.costoBase + "\nes gratuito? " + (this.gratuito ? "si":"no"));
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"+"\nSALA ASIGNADA");
         System.out.println("nombre de la sala: "+ this.sala.getNombre() + "\nID de la sala: "+ this.sala.getId());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println("datos de actividad");
+        System.out.println("Datos de actividad");
         for (Actividad i : this.actividades)
                 {
                     System.out.println("     ID: " + i.getId() + "\n     Titulo: "+ i.getTitulo()+ "\n     Cupo maximo: "+ i.getCupoMaximo());
                     i.mostrarInscripciones();
+                    System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
                 }
-        System.out.println("\n=================================================");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println( "COSTO ESTIMADO "+ calcularCostoEstimado() );
+        System.out.println("=================================================");
     }
 
     public Actividad getActividad(int id){
@@ -54,7 +57,7 @@ public class EventoUniversitario {
     //calcular costo no funciona porque en el ejercicio todavia no esta definido como se tiene que programar
     public double calcularCostoEstimado() {
         double costoEstimado = 0;
-        if (gratuito == true){
+        if (gratuito){
             return 0;
         }else{
             for(Actividad i:this.actividades){
